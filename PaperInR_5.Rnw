@@ -79,16 +79,13 @@ You can see the statistics of categorical variables in Table \ref{catexplore_tab
 %%%%%% NEW VERSION
 
 <<results=tex,echo=FALSE>>=
-# library(reporttools)
 
 tableNominal(vars = dataidx[, c(2:5)], 
              cap = "Freq Table", 
              vertical = FALSE, 
              lab ="catexplore_table",
              caption.placement = "top",
-             font.size = "normalsize",
-             add.to.row = list(pos = list(0),
-                               command = "\\hline"))
+             font.size = "normalsize")
 @
 
 
@@ -157,7 +154,7 @@ Here, I continue doing this nice work, I hope you like it and read it. It has be
 
 
 \begin{figure}[h]
-\centering
+\centering                                  %trim=left,bottom,right,top
 \begin{adjustbox}{width=7cm,height=7cm,clip,trim=0cm 0cm 0cm 0cm} 
 <<numcat_plot, echo=FALSE, fig=TRUE>>=
 boxplot(dataidx$FH~dataidx$Region,las=2)

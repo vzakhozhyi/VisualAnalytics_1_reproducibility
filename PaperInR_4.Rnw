@@ -32,7 +32,7 @@ This is an example on how to make a reproducible paper. We are using R from Rstu
 \end{abstract}
 
 % a section, notice it has a label for easy 'referencing'
-\section{Introduction}\label{intro}  %if no numner were needed \section*
+\section{Introduction}\label{intro}  %if no number is needed \section*
 
 This is my intro to my great paper, I will explain the cool things I can do with my new `computational thinking' powers combined with some Latex. This is my intro to my great paper, I will explain the cool things I can do with my new `computational thinking' powers combined with some Latex. This is my intro to my great paper, I will explain the cool things I can do with my new `computational thinking' powers combined with some Latex. This is my intro to my great paper, I will explain the cool things I can do with my new `computational thinking' powers combined with some Latex.
 
@@ -66,7 +66,7 @@ dataidx=read.csv(fileLink)
 Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.
 
 %%%%%% code for exploring here
-<<catexplore_table, echo=FALSE>>=
+<<cat_table, echo=FALSE>>=
 tableONI=table(dataidx$ONI)
 @
 
@@ -79,7 +79,7 @@ You can see this variable plotted in Figure \ref{catexplore_plot}
 \begin{adjustbox}{width=7cm,height=5cm}
 %\begin{adjustbox}{width=7cm,height=5cm,clip,trim=0cm 2cm 0cm 0cm} 
 %trimmimg: left,bottom, right,top
-<<catexplore_plot, echo=FALSE, fig=TRUE>>=
+<<cat_plot, echo=FALSE, fig=TRUE>>=
 barplot(tableONI)
 @
 \end{adjustbox}
@@ -96,7 +96,7 @@ barplot(tableONI)
 Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.Here, I continue doing this nice work, I hope you like it and read it. It has been a very hard work.
 
 %%%%%% code for exploring here
-<<numexplore_table, echo=FALSE>>=
+<<num_table, echo=FALSE>>=
 summary(dataidx[,c(3,4)])
 @
 
@@ -105,12 +105,12 @@ summary(dataidx[,c(3,4)])
 \begin{figure}[h]
 \centering
 \begin{adjustbox}{width=7cm,height=5.5cm,clip,trim=0cm 1cm 0cm 0cm} 
-<<numexplore_plot, echo=FALSE, fig=TRUE>>=
+<<num_plot, echo=FALSE, fig=TRUE>>=
 boxplot(dataidx[,c(3,4)])
 @
 \end{adjustbox}
 \caption{boxplots}  %title
-\label{numexplore_plot} % for \ref{}
+\label{num_plot} % for \ref{}
 \end{figure}
 
 
